@@ -46,7 +46,7 @@
         }
 
         &__video {
-            aspect-ratio: 6 / 7;
+            aspect-ratio: 7 / 7;
         }
 
         .hamburger {
@@ -138,6 +138,22 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+    }
+
+    .commerce {
+        &__title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        &__descr {
+            display: none;
+        }
+
+
+        &-form {
+            margin: 0 auto;
         }
     }
 }

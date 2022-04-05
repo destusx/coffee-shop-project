@@ -1,0 +1,17 @@
+.commerce {
+    min-height: 700px;
+    padding: 60px 0 30px 0;
+    background: url('../img/bg/commerce.jpg') center (center / cover) no-repeat;
+    &__title {
+        text-align: left;
+        color: #fff;
+    }
+
+    &__descr {
+        margin-top: 10px;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: left;
+        color: #FFFFFF;
+    }
+}
