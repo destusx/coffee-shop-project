@@ -1,0 +1,162 @@
+.dessert {
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 45px;
+    }
+
+    &__tab {
+        width: 220px;
+        height: 50px;
+        font-size: 17px;
+        line-height: 47px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        color: #0D0D0D;
+        border: 2px solid #D0D0D0;
+        margin: 0 20px;
+        border-radius: $br;
+        cursor: pointer;
+        transition: 0.3s all linear;
+        &:hover {
+            background-color: $main-color;
+            color: #fff;
+            border-color: $main-color;
+        }
+        &_active {
+            background-color: $main-color;
+            color: #fff;
+            border-color: $main-color;
+        }
+    }
+
+    &__content {
+        margin-top: 58px;
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: auto;
+        &_active {
+            display: flex;
+        }
+    }
+
+    &__item {
+        overflow: hidden;
+        padding: 20px;
+        width: 366px;
+        height: 520px;
+        border: 2px solid #E8E8E8;
+        border-radius: $br;
+    }
+
+    &__wrapper {
+        width: calc(200% + 40px);
+        display: flex;
+    }
+
+    &__main {
+        width: 50%;
+        margin-right: 0px;
+        transform: translateX(-100%);
+        transition: 1s all;
+        &_active {
+            transform: translateX(0%);
+            margin-right: 20px;
+        }
+    }
+
+    &__list {
+        width: 50%;
+        margin-left: 20px;
+        transform: translateX(0%);
+        padding-left: 10px;
+        padding-right: 20px;
+        margin-bottom: 0;
+        list-style-type: none;
+        transition: 1s all;
+        li {
+            position: relative;
+            font-size: 15px;
+            margin-bottom: 10px;
+            &::before {
+                content: '';
+                height: 16px;
+                width: 16px;
+                display: block;
+                position: absolute;
+                top: 2px;
+                left: -23px;
+                background: url('../icons/check.png') center (center / cover) no-repeat;
+            }
+        }
+        &_active {
+            transform: translateX(-100%);
+            margin-right: 0px;
+        }
+    }
+
+    &__back {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(calc(-50% - 20px));
+        display: block;
+        text-decoration-line: none;
+        font-size: 15px;
+        text-align: center;
+        color: $main-color;
+    }
+
+    &__img {
+        display: block;
+        margin: 0 auto;
+        height: 300px;
+        transition: 1.2s all ease;
+        &:hover {
+            transform: scale(1.1);
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: 17px;
+        text-align: center;
+        color: #0D0D0D;
+    }
+
+    &__descr {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+        color: #0D0D0D;
+    }
+
+    &__link {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        text-decoration-line: none;
+        font-size: 15px;
+        text-align: center;
+        color: $main-color;
+    }
+
+    &__price {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        color: #050505;
+        text-align: center;
+    }
+}

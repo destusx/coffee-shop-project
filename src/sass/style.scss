@@ -1,0 +1,27 @@
+@import 'base/variables';
+@import 'base/mixins';
+
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/fonts';
+@import 'libs/slick';
+
+* {
+	font-family: 'Comfortaa', cursive;
+}
+
+.container {
+	position: relative;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+
+@import 'blocks/titles';
+@import 'blocks/header';
+@import 'blocks/promo';
+@import 'blocks/advantages';
+@import 'blocks/carousel';
+@import 'blocks/coffee-menu';
+@import 'blocks/dessert';
+@import 'blocks/footer';
+@import 'blocks/media';

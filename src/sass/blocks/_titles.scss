@@ -1,0 +1,13 @@
+.title {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    &_main {
+        line-height: 50px;
+        font-size: 35px;
+        color: #FFFFFF;
+    }
+}

@@ -1,0 +1,23 @@
+@mixin menu_hover {
+    &::after {
+        content: '';
+        display: block;
+        bottom: -10px;
+        left: 50%;
+        position: absolute;
+        height: 3px;
+        width: 0%;
+        background-color: $main-color;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    }
+	&:hover {
+        &::after {
+            width: 100%; 
+            left: 0;
+        }
+    }
+}
+
+@mixin br {
+    border-radius: $br;
+}

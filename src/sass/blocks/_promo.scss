@@ -1,0 +1,19 @@
+.promo {
+    position: relative;
+    &__wrapper {
+        margin: 0 auto;
+        padding-top: 60px;
+        max-width: 600px;
+    }
+
+    &__subtitle {
+        margin-top: 15px;
+        font-size: 17px;
+        line-height: 25px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .xs-visible {
+        display: none;
+    }
+}
