@@ -81,6 +81,28 @@ new WOW().init();
           }
     });
     $('input[name="phone"]').mask("+38 (099) 999-9999");
+
+    $('.commerce-form').submit(function(e) {
+        e.preventDefault();
+        $ajax({
+            type:"POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+
+            $('.commerce-form').trigger('reset');
+        });
+
+    });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 1600) {
+                $('.pageup').fadeIn();
+            } else {
+                $('.pageup').fadeOut();
+            }
+        });
     });
 
 
