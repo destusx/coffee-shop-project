@@ -53,5 +53,35 @@ new WOW().init();
             $('.dessert__list').eq(i).toggleClass('dessert__list_active');
         });
     });
+
+    $('.commerce-form').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            phone: {
+                required: true,
+                minlength: 8
+            },
+            text: "required",
+            email:  {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: "Пожалуйста введите ваше имя",
+            phone: "Пожалуйста введите ваш телефон",
+            email: {
+              required: "Нам нужен Email адрес для контакта",
+              email: "Неверный Email адрес, шаблон -  name@domain.com"
+            },
+            text: "Напишите ваше сообщение",
+          }
     });
+    $('input[name="phone"]').mask("+38 (099) 999-9999");
+    });
+
+
     })(jQuery);
