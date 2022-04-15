@@ -56,22 +56,19 @@
             transform: translateY(-50%);
             right: 15px;
             width: 40px;
-            height: 27px;
+            height: 20px;
             span {
                 display: block;
                 width: 100%;
                 height: 2px;
+                margin-bottom: 13px;
                 background-color: #fff;
-                margin-bottom: 8px;
                 transition: 0.5s all linear;
-                &:nth-child(1) {
-                    width: 30px;
-                }
-                &:nth-child(3) {
-                    width: 30px;
+                &:last-child {
                     margin-bottom: 0;
                 }
             }
+
             &_active {
                 span {
                     margin-bottom: -2px;
@@ -79,9 +76,6 @@
                         transform: translateY(3px) rotate(-45deg);
                     }
                     &:nth-child(2) {
-                        display: none;
-                    }
-                    &:nth-child(3) {
                         transform: translateY(3px) rotate(45deg);
                     }
                 }
