@@ -1,13 +1,34 @@
 var slider = tns({
-	container: '.carousel__inner',
-	items: 1,
-	slideBy: 'page',
+    "container": ".dessert__inner",
+    "items": 3,
+    "mouseDrag": true,
+    "swipeAngle": false,
+    "speed": 400,	
 	controls: false,
 	nav: false,
 	autoplay: true,
-	speed: 1500,
 	autoplayTimeout: 5000,
-	autoplayButtonOutput: false
+	autoplayButtonOutput: false,
+    responsive: {
+        320: {
+            items: 1
+          },
+        640: {
+            items: 2
+        },
+        900: {
+            items: 3
+        }
+      }
+
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    slider.goTo('prev');
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+    slider.goTo('next');
 });
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -29,6 +50,20 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 new WOW().init();
+
+$('[data-modal=consultation]').on('click', function() {
+    $('.overlay, #consultation').fadeIn('slow');
+});
+$('.modal__close').on('click', function() {
+    $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+});
+
+$('.button_mini').each(function(i) {
+    $(this).on('click', function() {
+        $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+        $('.overlay, #order').fadeIn('slow');
+    })
+});
 
 (function($) {
     $(function() {
@@ -84,13 +119,13 @@ new WOW().init();
 
     $('.commerce-form').submit(function(e) {
         e.preventDefault();
-        $ajax({
+        $.ajax({
             type:"POST",
             url: "mailer/smart.php",
             data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
-
+            $('.overlay, #thanks').fadeIn('slow');
             $('.commerce-form').trigger('reset');
         });
 
@@ -120,5 +155,27 @@ new WOW().init();
       });
     }
 
+    $('form').submit(function(e) {
+        e.preventDefault();
+
+        if(!$(this).valid()) {
+            return;
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: 'mailer/smart.php',
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find('input').value('');
+            $('overlay, #thanks').fadeIn();
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
 
     })(jQuery);
+
+

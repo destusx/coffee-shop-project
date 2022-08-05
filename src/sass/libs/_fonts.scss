@@ -1,20 +1,4 @@
-@font-face {
-  font-family: 'Comfortaa';
-  src: local('Comfortaa Regular'), local('Comfortaa-Regular'),
-      url('../fonts/Comfortaa-Regular.woff2') format('woff2'),
-      url('../fonts/Comfortaa-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Comfortaa';
-  src: local('Comfortaa Bold'), local('Comfortaa-Bold'),
-      url('../fonts/Comfortaa-Bold.woff2') format('woff2'),
-      url('../fonts/Comfortaa-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 
 @font-face {

@@ -1,8 +1,36 @@
-@media (max-width: 1139px) {
-
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .header {
+        .menu {
+            gap: 30px;
+            a {
+                font-size: 11.5px;
+            }
+        }
+    }
+    .advantages {
+        &__item {
+            max-width: 230px;
+        }
+        &__icon {
+            height: 240px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 25px;
+    }
+
     .header {
         height: 75px;
         &__logo {
@@ -75,7 +103,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            right: 15px;
+            right: -10px;
             width: 40px;
             height: 20px;
             span {
@@ -92,8 +120,9 @@
 
             &_active {
                 position: fixed;
-                top: 41px;
+                top: 38px;
                 transform: 0;
+                right: 15gpx;
                 span {
                     margin-bottom: -2px;
                     &:nth-child(1) {
@@ -157,6 +186,10 @@
                 margin-bottom: 0;
             }
         }
+
+        .prev, .next {
+            display: none;
+        }
     }
 
     .commerce {
@@ -181,4 +214,63 @@
         width: 30px;
         height: 30px;
     }
+
+    .interior {
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+        }
+
+        #first {
+            grid-row-start: auto;
+            grid-row-end: auto;
+        }
+    
+        #senenth {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        #second {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        #fifth {
+            grid-row-start: 3;
+            grid-row-end: 5;
+            grid-column: 2 / 3;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 6px;
+    }
+
+    .title {
+        font-size: 25px;
+        line-height: 33px;
+    }
+
+    .header {
+        .hamburger {
+            right: 7px;
+            &_active {
+                right: 13px
+            }
+        }
+    }
+
+    .advantages {
+        &__item {
+            max-width: 305px;
+        }
+        &__icon {
+            height: 260px;
+        }
+    }
+
 }
